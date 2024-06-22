@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .speed_limit_container {
+            position: absolute;
+            bottom: 30px;
+            right: 30px;
+            display: none;
+        }
+        .speed_limit_sign {
+            width: 140px;
+            border-radius: 9px;
+        }
+        .speed_limit_text {
+            position: absolute;
+            top: 70%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 60px;
+            font-weight: bold;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div id="speedLimitContainer" class="speed_limit_container">
+        <img src="assets/speed_limit_sign.png" class="speed_limit_sign">
+        <div id="speedLimitText" class="speed_limit_text"></div>
+    </div>
+    
+    <script>
+        function handleMessage(event) {
+            if (event.data.type === 'ui') {
+                const speedLimitContainer = document.getElementById('speedLimitContainer');
+                const speedLimitText = document.getElementById('speedLimitText');
+                
+                speedLimitContainer.style.display = event.data.display ? 'block' : 'none';
+                
+                if (event.data.speedLimit) {
+                    speedLimitText.textContent = Math.round(event.data.speedLimit);
+                }
+            }
+        }
+        
+        window.addEventListener('message', handleMessage);
+    </script>
+</body>
+</html>
