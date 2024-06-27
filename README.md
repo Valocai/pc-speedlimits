@@ -17,3 +17,11 @@ https://github.com/Valocai/pc-speedlimits/assets/84250638/1dd087ef-502e-4c40-970
 2. Add `ensure pc-speedlimits` to your server.cfg
 3. Restart your server
 4. Enjoy!
+
+
+
+
+
+
+
+JOIN THE DISCORD! https://discord.gg/F5sMc8Bh8k
