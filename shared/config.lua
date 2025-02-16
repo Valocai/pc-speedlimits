@@ -1,5 +1,12 @@
 Config = {}
 
+Config.Settings = {
+    kmh = false,
+    cooldown = 20,
+    speedThreshold = 28,
+    keepon = true
+}
+
 Config.Speedlimit = {
     ["Joshua Rd"] = 60,
     ["East Joshua Road"] = 60,
